@@ -59,14 +59,15 @@ gp <- ggplot() +
           color = "#0366D6",
           size = 0.9,
           alpha = 0.9) +
-  coord_sf(xlim = c(-97.75, -97.3), 
+  coord_sf(xlim = c(-97.8, -97.25), 
            ylim = c(35.3, 35.63),
            expand = FALSE) +
-  annotate("text", x = -97.525, y = 35.34, 
+  annotate("label", x = -97.525, y = 35.34, 
            label = "Oklahoma City Bike Trails",
            family = "Copperplate Light",
+           color = "#054289",
            size = 16) +
   theme_void() +
   nowt()
 gp
-ggsave(here(str_c(city, ".png")), plot = gp, width = 10, height = 10, dpi = 400)
+ggsave(here(str_c(city, ".png")), plot = gp, width = 10, height = 8, dpi = 400)
